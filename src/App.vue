@@ -100,7 +100,7 @@ export default {
           <div class="modalWindow__value">
             <p>Данные о пользователе</p>
             <input
-              class="modalWindow__value-field"
+              class="modalWindow__inputField"
               type="text"
               v-model="selectedUser.value"
             />
@@ -151,14 +151,11 @@ export default {
     gap: 30px;
   }
   &__card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    width: 100px;
-    height: 100px;
-
     border: 1px solid gray;
+    width: 100px;
+    align-self: flex-start;
+    min-height: 100px;
+
     border-radius: 20px;
 
     cursor: pointer;
@@ -171,11 +168,16 @@ export default {
     font-weight: 600;
     font-size: 18px;
     padding-top: 15px;
+    text-align: center;
   }
   &__value {
+    padding: 3px;
+    width: 100%;
+    word-wrap: break-word;
+    word-break: break-word;
     font-weight: 500;
     font-size: 16px;
-    padding-top: 15px;
+    padding-top: 5px;
   }
 }
 
@@ -252,14 +254,14 @@ export default {
     @media (min-width: 2560px) {
       font-size: 20px;
     }
-    &-field {
-      padding: 5px;
-      font-size: 16px;
-      border-radius: 20px;
-      border: 2px solid black;
-      @media (min-width: 2560px) {
-        font-size: 20px;
-      }
+  }
+  &__inputField {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 2px solid black;
+    @media (min-width: 2560px) {
+      font-size: 20px;
     }
   }
   &__button {
